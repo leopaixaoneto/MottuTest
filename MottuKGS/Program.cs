@@ -41,7 +41,8 @@ builder.Host.UseSerilog((ctx, cfg) =>
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsDevelopment()) 
+    app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
