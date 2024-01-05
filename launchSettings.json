@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "mottutestEcoSystem",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "serviceActions": {
+        "mottutest": "StartDebugging",
+        "mottutest.db": "StartWithoutDebugging",
+        "mottutest.cache": "StartWithoutDebugging",
+        "mottukgs": "StartDebugging",
+        "mottukgs.db": "StartWithoutDebugging",
+        "mottuanalytics": "StartDebugging",
+        "mottuanalytics.db": "StartWithoutDebugging",
+        "mottutest.mq": "StartWithoutDebugging"
+      }
+    }
+  }
+}
