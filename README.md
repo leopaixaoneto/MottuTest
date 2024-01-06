@@ -11,8 +11,9 @@
   <a aria-label="Mottu" href="https://mottu.com.br/">
     <img src="https://img.shields.io/badge/Feito%20Para-Mottu-green.svg?style=for-the-badge">
   </a>
+  <img alt="" src="https://img.shields.io/badge/versão-.Net7-blue.svg?style=for-the-badge">
   <a aria-label="Linkedin" href="https://www.linkedin.com/in/leopaixaoneto/">
-    <img alt="" src="https://img.shields.io/badge/Meu%20Linkedin-blue.svg?style=for-the-badge&logo=Linkedin&labelColor=0A66C2&logoWidth=20">
+    <img alt="" src="https://img.shields.io/badge/Linkedin-blue.svg?style=for-the-badge&logo=Linkedin&labelColor=0A66C2&logoWidth=20">
   </a>
 </p>
 
@@ -23,16 +24,16 @@ Visite <a aria-label="Aprenda sobre a Mottu" href="https://mottu.com.br">Mottu</
 
 O objetivo deste, da-se pela construção de um encurtador de URL no estilo <a aria-label="Aprenda sobre TinyURL" href="https://tinyurl.com/app">TinyURL</a>
 
- 
-## ⚡ Documentação
+
+## Documentação
 
 Visite o <a aria-label="Arquivo descritivo" href="https://mottucombr-my.sharepoint.com/:w:/g/personal/andre_porto_mottu_com_br/EfaytSfKUnRbMGCVWlW8z5wBj3tQJnwYcu0cFrpXgSvGiQ?e=4%3Ay7V2vk&at=9&CID=F21BFA81-3F8D-47FD-B252-14320F974474&wdLOR=cFB20A7DB-AEDE-4E68-8C6A-764D6F56D20D">Arquivo</a> descritivo do problema proposto.
 
- 
 ## Explicação da solução
 
 Para solucionar o problema abordado, optei por dividir a solução em alguns projetos separados para isolar as responsabilidades da aplicação e aumentar a performance como um todo, visando uma grande quantidade de usuários simultâneos.
 
+<br>
 <p align="center">  
   Arquitetura escolhida para resolver o problema
 </p>
@@ -66,7 +67,7 @@ Para solucionar o problema abordado, optei por dividir a solução em alguns pro
   - Possuí um cache in-memory afim de aumentar a velocidade de resposta para requisições repetidas da Api central
   - Comunica-se com a Api central através de um Message Broker (rabbitMQ)
 
- 
+
 ## Explicação dos projetos
 <p>
   Dentro da solução existem alguns projetos, sendo seus nomes e respectivas funções:
@@ -80,7 +81,6 @@ Para solucionar o problema abordado, optei por dividir a solução em alguns pro
   | `MottuShared`       | Projeto de suporte, responsável por centralizar classes, funções e configurações usadas por mais de um projeto |
   | `MottuLB` | Projeto de suporte, pré configurado para servir de LoadBalancer para a Api principal|
 
-<br>
 
 ## Iniciando o projeto
 <p>
@@ -117,6 +117,14 @@ Faça os testes a partir da collection insomnia contida na mesma pasta.
 
 Recomendo que execute as chamadas varias vezes seguidas para observar a diminuição do tempo de execução, ganhos adquiridos pelas técnicas utilizadas no projeto (caching, comunication, etc)
 
-## Author
 
+## Tecnologias Usadas
+<p float="left">
+  <img alt="" src="https://img.shields.io/badge/CSharp-239120?style=for-the-badge&logo=csharp&logoColor=white">
+  <img alt="" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
+  <img alt="" src="https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white">
+  <img alt="" src="https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white">
+</p>
+
+## Autor
 - Leonardo Paixão Viana ([@leopaixaoneto](https://www.linkedin.com/in/leopaixaoneto/))
