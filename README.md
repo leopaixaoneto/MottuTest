@@ -115,6 +115,8 @@ Após iniciados, verifique se todos os serviços estão ligados no container Doc
 
 Faça os testes a partir da collection insomnia contida na mesma pasta.
 
+Recomendo que execute as chamadas varias vezes seguidas para observar a diminuição do tempo de execução, ganhos adquiridos pelas técnicas utilizadas no projeto (caching, comunication, etc)
+
 ## Author
 
 - Leonardo Paixão Viana ([@leopaixaoneto](https://www.linkedin.com/in/leopaixaoneto/))
