@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nextjs.org">
+  <a href="https://mottu.com.br/">
     <picture>
       <img src="https://cdn.discordapp.com/attachments/855339357157064765/1193238479186964610/Mottu-grupo-verde-horizontal.png" height="128">
     </picture>
