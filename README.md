@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://nextjs.org">
     <picture>
-      <img src="https://mottu.com.br/wp-content/uploads/2022/02/Mottu-grupo-verde-horizontal.png" height="128">
+      <img src="https://cdn.discordapp.com/attachments/855339357157064765/1193238479186964610/Mottu-grupo-verde-horizontal.png" height="128">
     </picture>
     <h1 align="center">Mottu Url Shortener</h1>
   </a>
