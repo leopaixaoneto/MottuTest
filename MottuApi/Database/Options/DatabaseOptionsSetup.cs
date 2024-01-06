@@ -1,0 +1,26 @@
+﻿using Microsoft.Extensions.Options;
+
+namespace MottuTest.Database.Options
+{
+    public class DatabaseOptionsSetup : IConfigureOptions<DatabaseOptions>
+    {
+        private const string ConfigurationSectionName = "DatabaseOptions";
+        private readonly IConfiguration _configuration;
+
+        public DatabaseOptionsSetup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public void Configure(DatabaseOptions options)
+        {
+            if (options == null) throw new ArgumentNullException(nameof(options));
+
+            var connString = _configuration.GetConnectionString("DatabaseOptions");
+
+            options.ConnectionString = connString == null ? string.Empty : connString;
+
+            _configuration.GetSection(ConfigurationSectionName).Bind(options);
+        }
+    }
+}

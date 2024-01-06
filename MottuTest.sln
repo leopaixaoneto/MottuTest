@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MottuApi", "MottuApi\MottuApi.csproj", "{71F6F52B-345B-48D0-8242-532F5D0DA2AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E16B9500-5522-400D-9EE8-F69603E63988}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A1EFEB0F-1BCE-4278-8F87-B57291FC88BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MottuKGS", "MottuKGS\MottuKGS.csproj", "{46562A55-105F-41DF-9A1B-395F9FA05BC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MottuAnalytics", "MottuAnalytics\MottuAnalytics.csproj", "{EF799255-F882-4FA2-A447-9EB7CF4DC1B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MottuShared", "MottuShared\MottuShared.csproj", "{52DD0299-8F33-49F3-AD2D-15F7BB18C940}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71F6F52B-345B-48D0-8242-532F5D0DA2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F6F52B-345B-48D0-8242-532F5D0DA2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F6F52B-345B-48D0-8242-532F5D0DA2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F6F52B-345B-48D0-8242-532F5D0DA2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1EFEB0F-1BCE-4278-8F87-B57291FC88BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EFEB0F-1BCE-4278-8F87-B57291FC88BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EFEB0F-1BCE-4278-8F87-B57291FC88BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1EFEB0F-1BCE-4278-8F87-B57291FC88BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46562A55-105F-41DF-9A1B-395F9FA05BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46562A55-105F-41DF-9A1B-395F9FA05BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46562A55-105F-41DF-9A1B-395F9FA05BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46562A55-105F-41DF-9A1B-395F9FA05BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF799255-F882-4FA2-A447-9EB7CF4DC1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF799255-F882-4FA2-A447-9EB7CF4DC1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF799255-F882-4FA2-A447-9EB7CF4DC1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF799255-F882-4FA2-A447-9EB7CF4DC1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DD0299-8F33-49F3-AD2D-15F7BB18C940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DD0299-8F33-49F3-AD2D-15F7BB18C940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DD0299-8F33-49F3-AD2D-15F7BB18C940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DD0299-8F33-49F3-AD2D-15F7BB18C940}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7941B62D-B6BF-4252-B9FD-5DF0A37C173C}
+	EndGlobalSection
+EndGlobal

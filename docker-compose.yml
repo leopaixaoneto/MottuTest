@@ -1,0 +1,99 @@
+version: "3.4"
+
+services:
+  mottutest:
+    image: ${DOCKER_REGISTRY-}mottuapi
+    container_name: API
+    build:
+      context: .
+      dockerfile: MottuApi/Dockerfile
+    depends_on:
+      mottutest.mq:
+        condition: service_healthy
+
+  mottutest.db:
+    image: postgres:latest
+    container_name: API-PostgreSQL
+    restart: always
+    environment:
+      - POSTGRES_DB=mottutest-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/database/api:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  mottutest.cache:
+    image: redis:7.2-alpine
+    container_name: API-Redis
+    restart: always
+    ports:
+      - 6379:6379
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - cache:/data
+
+  mottukgs:
+    image: ${DOCKER_REGISTRY-}mottukgs
+    container_name: KGS
+    build:
+      context: .
+      dockerfile: MottuKGS/Dockerfile
+    depends_on:
+      mottutest.mq:
+        condition: service_healthy
+
+  mottukgs.db:
+    image: postgres:latest
+    container_name: KGS-PostgreSQL
+    environment:
+      - POSTGRES_DB=mottukgs-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/database/kgs:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+
+  mottuanalytics:
+    image: ${DOCKER_REGISTRY-}mottuanalytics
+    container_name: Analytics
+    build:
+      context: .
+      dockerfile: MottuAnalytics/Dockerfile
+    depends_on:
+      mottutest.mq:
+        condition: service_healthy
+
+  mottuanalytics.db:
+    image: postgres:latest
+    container_name: Analytics-PostgreSQL
+    environment:
+      - POSTGRES_DB=mottuanalytics-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/database/analytics:/var/lib/postgresql/data
+    ports:
+      - 5434:5432
+
+  mottutest.mq:
+    image: rabbitmq:management
+    container_name: MServices-RabbitMq
+    hostname: mottutest.mq
+    volumes:
+      - ./.containers/queue/data/:/var/lib/rabbitmq
+      - ./.containers/queue/log/:/var/log/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 15s
+      timeout: 15s
+      retries: 3
+
+volumes:
+  cache:
+    driver: local
