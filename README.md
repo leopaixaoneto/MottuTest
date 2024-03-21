@@ -38,7 +38,7 @@ Para solucionar o problema abordado, optei por dividir a solução em alguns pro
   Arquitetura escolhida para resolver o problema
 </p>
 <p align="center">
-  <img src="https://media.discordapp.net/attachments/855339357157064765/1192977156981133362/archtecture.jpg?ex=65ab098e&is=6598948e&hm=109cba68a3bdc7157a4d06044acc444b04bb340ef3553d8765286e4461745fe2&=" height="512" />
+  <img src="https://i.imgur.com/MpND112_d.webp?maxwidth=760&fidelity=grand" height="512" />
 </p>
 
 - <b>Api central:</b> 
