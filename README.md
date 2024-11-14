@@ -38,7 +38,7 @@ Para solucionar o problema abordado, optei por dividir a solução em alguns pro
   Arquitetura escolhida para resolver o problema
 </p>
 <p align="center">
-  <img src="https://prnt.sc/74FOxJKWmeRG" height="512" />
+  <img src="https://img001.prntscr.com/file/img001/2fBnc6Y6SaOmrAo-LlFKPw.png" height="512" />
 </p>
 
 - <b>Api central:</b> 
