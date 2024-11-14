@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://mottu.com.br/">
     <picture>
-      <img src="https://cdn.discordapp.com/attachments/855339357157064765/1193238479186964610/Mottu-grupo-verde-horizontal.png" height="128">
+      <img src="https://mottu.com.br/wp-content/uploads/2022/02/Mottu-grupo-verde-horizontal.png" height="128">
     </picture>
     <h1 align="center">Mottu Url Shortener</h1>
   </a>
@@ -38,7 +38,7 @@ Para solucionar o problema abordado, optei por dividir a solução em alguns pro
   Arquitetura escolhida para resolver o problema
 </p>
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1111455393483333673/1220418199280160818/archtecture.jpg?ex=660ede04&is=65fc6904&hm=0df585b616158f72d00ecbb30c3d0ab198f7bff228bdfc8e71965a434acbc10e&" height="512" />
+  <img src="https://prnt.sc/74FOxJKWmeRG" height="512" />
 </p>
 
 - <b>Api central:</b> 
